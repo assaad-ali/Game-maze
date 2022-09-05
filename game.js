@@ -45,6 +45,13 @@ function theStart(){
     startTimer()
 }
 
+/********************* Events Listeners /**********************/
+
+function addStartEventlistener(){
+
+    document.getElementById("start").addEventListener("mouseenter", theStart)
+}
+
 /********************** Initialize Game **********************/
 
 function initMaze() {
