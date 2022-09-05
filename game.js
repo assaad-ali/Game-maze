@@ -16,7 +16,7 @@ function updateHtml(){
     // console.log("stop watch",stopWatch);
     // stopWatch. = document.createElement("div");
     // stopWatch.classList.add("score_div");
-    console.log("stop watch",stopWatch);
+    // console.log("stop watch",stopWatch);
     
     stopWatch.innerHTML = "<div class ='stopWatch' id='live_timer'></div> <div class ='stopWatch' id='last_score'></div> <div class ='stopWatch' id='best_score'></div>";
     stopWatch.style.display = "flex";
@@ -33,6 +33,16 @@ function updateHtml(){
     document.body.appendChild(stopWatch);
     
 
+}
+
+/********************* Functions /**********************/
+
+function theStart(){
+
+    playing = true
+    
+    // liveTimer_div = document.getElementById("live_timer")
+    startTimer()
 }
 
 /********************** Initialize Game **********************/
