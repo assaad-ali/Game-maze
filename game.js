@@ -66,7 +66,7 @@ function lose(){
     playing = false
 
     updateScore(-10)
-    updateMessage("You Lost!")
+    updateMessage("You Lost!", "youlose")
     
     drawRedBoundaries()
     document.getElementById
@@ -79,6 +79,20 @@ function removeRedBoundaries(){
 
         boundaries[i].classList.remove("youlose")
     }
+}
+
+
+function updateScore(score){
+
+    gamescore += score
+    document.getElementById("score").innerText = gamescore
+}
+
+function updateMessage(message, _class){
+
+    document.getElementById('status').innerText = message
+
+    document.getElementById('status').className = _class
 }
 
 
