@@ -94,6 +94,18 @@ function updateMessage(message, _class){
     document.getElementById('status').className = _class
 }
 
+function theEnd(){
+    
+    if(playing){
+
+        playing = false
+
+        updateScore(5)
+        updateMessage("You Won!", "wonMessage")
+        endTimer()
+        checkBestTimer()  
+    } 
+}
 
 /********************* Events Listeners /**********************/
 
