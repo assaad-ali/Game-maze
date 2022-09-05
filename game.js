@@ -1,6 +1,6 @@
 /********************* Global Variables **********************/
 
-var bounderies = document.getElementsByClassName("boundary")
+var boundaries = document.getElementsByClassName("boundary")
 var playing = false
 var gamescore = 0
 var liveTimer = Date.now()
@@ -40,10 +40,27 @@ function updateHtml(){
 function theStart(){
 
     playing = true
-    
+    removeRedBoundaries()
     // liveTimer_div = document.getElementById("live_timer")
     startTimer()
 }
+
+
+function drawRedBoundaries(){
+    
+    for(let i =0; i<boundaries.length; i++){
+
+        boundaries[i].classList.add("youlose")
+    }
+}
+
+function onBoundary(){
+    
+    if(playing){
+        lose()
+    }
+}
+
 
 /********************* Events Listeners /**********************/
 
@@ -52,11 +69,23 @@ function addStartEventlistener(){
     document.getElementById("start").addEventListener("mouseenter", theStart)
 }
 
+function addOnBoundaryEventListener(){
+
+    for(let i = 0; i < boundaries.length; i++){
+
+        boundaries[i].addEventListener("mouseenter", onBoundary) 
+    }
+}
+
+
 /********************** Initialize Game **********************/
 
 function initMaze() {
 
     updateHtml()
+    addStartEventlistener()
+    addOnBoundaryEventListener()
+    
 }
 
 window.onload = function(){
