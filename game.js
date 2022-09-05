@@ -107,7 +107,15 @@ function theEnd(){
     } 
 }
 
+function restart(){
 
+    playing = false
+    
+    updateScore(-gamescore)
+    removeRedBoundaries()
+    endTimer()
+    updateMessage("Begin by moving your mouse over the \"S\"", "")
+}
 
 /********************* Events Listeners /**********************/
 
