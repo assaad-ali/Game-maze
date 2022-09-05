@@ -69,7 +69,6 @@ function lose(){
     updateMessage("You Lost!", "youlose")
     
     drawRedBoundaries()
-    document.getElementById
     endTimer()
 }
 
@@ -109,6 +108,11 @@ function addOnBoundaryEventListener(){
 
         boundaries[i].addEventListener("mouseenter", onBoundary) 
     }
+}
+
+function addOutBoundaryEventListener(){
+
+    document.getElementById("game").addEventListener("mouseleave", onBoundary)
 }
 
 
