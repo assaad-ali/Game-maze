@@ -61,6 +61,19 @@ function onBoundary(){
     }
 }
 
+function lose(){
+
+    playing = false
+
+    updateScore(-10)
+    updateMessage("You Lost!")
+    
+    drawRedBoundaries()
+    document.getElementById
+    endTimer()
+}
+
+
 
 /********************* Events Listeners /**********************/
 
