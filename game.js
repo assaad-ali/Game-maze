@@ -115,6 +115,11 @@ function addOutBoundaryEventListener(){
     document.getElementById("game").addEventListener("mouseleave", onBoundary)
 }
 
+function addEndEventListener(){
+
+    document.getElementById("end").addEventListener("mouseenter", theEnd)
+}
+
 
 /********************** Initialize Game **********************/
 
