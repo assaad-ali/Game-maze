@@ -73,6 +73,13 @@ function lose(){
     endTimer()
 }
 
+function removeRedBoundaries(){
+
+    for(let i=0; i<boundaries.length; i++){
+
+        boundaries[i].classList.remove("youlose")
+    }
+}
 
 
 /********************* Events Listeners /**********************/
