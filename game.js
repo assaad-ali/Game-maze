@@ -107,6 +107,8 @@ function theEnd(){
     } 
 }
 
+
+
 /********************* Events Listeners /**********************/
 
 function addStartEventlistener(){
@@ -132,6 +134,10 @@ function addEndEventListener(){
     document.getElementById("end").addEventListener("mouseenter", theEnd)
 }
 
+function addRestartEventListener(){
+
+    document.getElementById("start").addEventListener("click", restart)
+}
 
 /********************** Initialize Game **********************/
 
@@ -140,7 +146,8 @@ function initMaze() {
     updateHtml()
     addStartEventlistener()
     addOnBoundaryEventListener()
-    
+    addEndEventListener()
+    addRestartEventListener()
 }
 
 window.onload = function(){
